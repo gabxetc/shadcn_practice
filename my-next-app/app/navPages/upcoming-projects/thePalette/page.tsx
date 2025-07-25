@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import { NavBar } from "@/app/components/navBar";
+import NotFound from "@/app/not-found";
 
 
-export default function THePalettePage() {
+export default function ThePalettePage() {
   return (
         <>
         <header className="bg-black pt-5 flex justify-center items-center">
@@ -17,6 +18,9 @@ export default function THePalettePage() {
             </div>
         </div>
         </header>
+        <body>
+          <NotFound/>
+        </body>
     </>
   );
 }

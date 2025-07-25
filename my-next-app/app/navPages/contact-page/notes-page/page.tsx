@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { NavBar } from "@/app/components/navBar";
+import NotFound from "@/app/not-found";
 
 export default function NotesPage() {
   return (
@@ -16,6 +17,9 @@ export default function NotesPage() {
             </div>
         </div>
         </header>
+        <body>
+          <NotFound/>
+        </body>
     </>
   );
 }
