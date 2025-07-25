@@ -56,9 +56,11 @@ return (
         I create—whether visual or digital—is rooted in 
         storytelling, empathy, and a drive to make a meaningful impact.
     </p>
+    <h1 className="text-3xl font-bold">Get To Know Me</h1>
+    
     {/* Music Stuff */}
 
-    <h1 className="text-3xl font-bold">Here Are My Top Listens</h1>
+    <h1 className="text-2xl font-bold">Here's What I've Been Listening To!</h1>
     <section>
     <h2 className="text-xl font-semibold">Top Artists</h2>
     <div className="w-full max-w-xs mx-auto text-center">
