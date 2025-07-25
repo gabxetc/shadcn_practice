@@ -117,7 +117,7 @@ export function NavBar() {
                   <Link href="/navPages/contact-page/contact-me">Contact Me</Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link href="/navPages/contact-page/notes-page">Leave Me A Notes</Link>
+                  <Link href="/navPages/contact-page/notes-page">Leave Me A Note</Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
                   <Link href="/navPages/contact-page/coffee-page">Buy Me A Coffee</Link>
