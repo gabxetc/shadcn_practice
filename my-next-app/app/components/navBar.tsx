@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react"
 
 import {
   NavigationMenu,
@@ -57,14 +56,20 @@ export function NavBar() {
     <NavigationMenu viewport={false}>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+          {/* Use NavigationMenuLink with navigationMenuTriggerStyle and asChild */}
+          <NavigationMenuLink href="/" className={navigationMenuTriggerStyle()}>
+            Dashboard
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger>About Me</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <ListItem href="/docs" title="Programming">
+                <ListItem href="/navPages/about-me/programming-page" title="Programming">
               </ListItem>
-              <ListItem href="/docs" title="Photography">
+              <ListItem href="/navPages/about-me/photography-page" title="Photography">
               </ListItem>
-              <ListItem href="/docs" title="Poetry">
+              <ListItem href="/navPages/about-me/poetry-page" title="Poetry">
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -75,7 +80,7 @@ export function NavBar() {
             <ul className="grid w-[300px] gap-4">
               <li>
                 <NavigationMenuLink asChild>
-                  <Link href="#">
+                  <Link href="/navPages/upcoming-projects/buddy">
                     <div className="font-medium">Buddy</div>
                     <div className="text-muted-foreground">
                       You're go-to app for kid friendly internet surfing
@@ -83,7 +88,7 @@ export function NavBar() {
                   </Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link href="#">
+                  <Link href="/navPages/upcoming-projects/thePalette">
                     <div className="font-medium">The Palette</div>
                     <div className="text-muted-foreground">
                       Meet like minded individuals who want to get creative like you
@@ -92,7 +97,7 @@ export function NavBar() {
                 </NavigationMenuLink>
 
                 <NavigationMenuLink asChild>
-                  <Link href="#">
+                  <Link href="/navPages/upcoming-projects/otherResources">
                     <div className="font-medium">Other Resources</div>
                     <div className="text-muted-foreground">
                       Other things I am doing that you might be interested in
@@ -104,18 +109,18 @@ export function NavBar() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Connet With Me</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Let's Connect!</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[200px] gap-4">
               <li>
                 <NavigationMenuLink asChild>
-                  <Link href="#">Email</Link>
+                  <Link href="/navPages/contact-page/contact-me">Contact Me</Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link href="#">WhatsApp</Link>
+                  <Link href="/navPages/contact-page/notes-page">Leave Me A Notes</Link>
                 </NavigationMenuLink>
                 <NavigationMenuLink asChild>
-                  <Link href="#">Social Media</Link>
+                  <Link href="/navPages/contact-page/coffee-page">Buy Me A Coffee</Link>
                 </NavigationMenuLink>
               </li>
             </ul>

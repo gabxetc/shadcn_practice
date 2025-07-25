@@ -13,7 +13,7 @@ import { NavBar } from "./components/navBar";
 // const titles = [<><p><strong>Day:</strong> {topArtists.day.join(", ")}</p>, <p><strong>Month:</strong> {topArtists.month.join(", ")}</p>,<p><strong>Year:</strong> {topArtists.year.join(", ")}</p></>]
             
 
-const portfolioPage = () => {
+const HomePage = () => {
 const [currentIndex, setCurrentIndex] = React.useState(0);
 const song = topSongs[currentIndex]; // or choose however you want to match songs to albums
 
@@ -90,4 +90,4 @@ return (
 );
 };
 
-export default portfolioPage;
+export default HomePage;
