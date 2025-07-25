@@ -21,21 +21,21 @@ export const topSongs = [
 export const albumCovers = [
   {
     image: img1,
-    title: "Album 1",
-    artist: "Artist One",
-    description: "Top songs from today",
+    title: "99.9%",
+    artist: "Kaytranada",
+    description: "Leave Me Alone",
   },
   {
     image: img2,
-    title: "Album 2",
-    artist: "Artist Two",
-    description: "Top songs this month",
+    title: "Blond",
+    artist: "Frank Ocean",
+    description: "Pink + White",
   },
   {
     image: img3,
-    title: "Album 3",
-    artist: "Artist Three",
-    description: "Top songs this year",
+    title: "Flower Boy",
+    artist: "Tyler The Creator",
+    description: "Garden Shed",
   },
 ]
 

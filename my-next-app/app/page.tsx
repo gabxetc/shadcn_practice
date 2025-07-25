@@ -100,7 +100,7 @@ return (
       </div>
 
     {/* Music Stuff */}
-
+    <p>Get to know a little bit about me and what I like to listen to.</p>
     <h1 className="text-2xl font-bold">Here's What I've Been Listening To!</h1>
     <section>
     <h2 className="text-xl font-semibold text-center mb-5">Top Artists</h2>
