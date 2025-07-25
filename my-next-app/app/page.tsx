@@ -1,6 +1,6 @@
 "use client"
 import './globals.css'; 
-import { albumCovers, drawCard, topArtists, topSongs} from "@/app/resources";
+import { albumCovers, drawCard, topArtists, topSongs} from "@/app/components/music";
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button";
 import React from "react";
@@ -32,17 +32,38 @@ setCurrentIndex((prev) => (prev - 1 + albumCovers.length) % albumCovers.length)
 const currentAlbum = albumCovers[currentIndex]
 
 return (
-<main className="p-6 space-y-8">
-    <NavBar />
-    <h1 className="text-3xl font-bold mt-10">Welcome to My Portfolio</h1>
-
+<main className="p-6 space-y-8 flex flex-col items-center">
+    <div className="w-full flex justify-between items-center mb-8">
+        <div>
+        <h1 className="text-3xl font-bold mt-10">Welcome to My Portfolio</h1>
+        </div>
+        <div className = "mr-5">
+        <NavBar/>
+        </div>
+    </div>
+    {/* About Me */}
+    <h1 className="text-3xl font-bold">Hi! My Name is Gaby,</h1>
+    <p className="max-w-prose mx-auto px-4 sm:px-6 lg:px-8 text-gray-700 leading-relaxed text-center">
+        And I'm a photographer, poet, and aspiring programmer from Johannesburg, South Africa. 
+        My work blends creativity and problem-solving—
+        I capture human stories through my lens and 
+        build digital solutions that serve communities. 
+        With over five years of photography experience, 
+        I’ve covered weddings, events, and personal projects that celebrate identity, 
+        resilience, and connection. Alongside my art, I’m passionate about 
+        front-end development and using technology to solve real-world problems, 
+        especially in healthcare and public services. Everything 
+        I create—whether visual or digital—is rooted in 
+        storytelling, empathy, and a drive to make a meaningful impact.
+    </p>
     {/* Music Stuff */}
+
     <h1 className="text-3xl font-bold">Here Are My Top Listens</h1>
     <section>
     <h2 className="text-xl font-semibold">Top Artists</h2>
     <div className="w-full max-w-xs mx-auto text-center">
         <Card className="rounded-xl overflow-hidden">
-        <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden rounded-xl">
+        <CardContent className="flex aspect-square items-center justify-center p-5.5 fill rounded-xl">
             <Image
             src={currentAlbum.image}
             alt={currentAlbum.title}
@@ -62,11 +83,9 @@ return (
         <Button onClick={goToNextAlbum}>Next</Button>
         </div>
     </div>
-
     </section>
 </main>
 );
 };
-
 
 export default portfolioPage;
